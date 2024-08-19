@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { User } from '../domain/user.model';
 import { ApiService } from './api.service';
 
 @Injectable({
@@ -9,8 +8,8 @@ import { ApiService } from './api.service';
 export class UserService {
   constructor(private apiService: ApiService) {}
 
-  register(user: User): Observable<any> {
-    return this.apiService.register(user);
+  register(username: string, password: string): Observable<any> {
+    return this.apiService.register(username, password);
   }
 
   login(username: string, password: string): Observable<any> {
