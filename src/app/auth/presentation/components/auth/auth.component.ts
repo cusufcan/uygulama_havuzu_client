@@ -8,4 +8,12 @@ import { Component } from '@angular/core';
 export class AuthComponent {
   username = '';
   password = '';
+
+  login() {
+    this.username = '';
+  }
+
+  register() {
+    this.password = '';
+  }
 }
