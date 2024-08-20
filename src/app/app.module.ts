@@ -12,10 +12,13 @@ import { ButtonModule } from 'primeng/button';
 import { IconFieldModule } from 'primeng/iconfield';
 import { InputIconModule } from 'primeng/inputicon';
 import { InputTextModule } from 'primeng/inputtext';
+import { HomeCardComponent } from './home/presentation/components/home-card/home-card.component';
 import { HomeComponent } from './home/presentation/components/home/home.component';
 
+import { CardModule } from 'primeng/card';
+
 @NgModule({
-  declarations: [AppComponent, AuthComponent, HomeComponent],
+  declarations: [AppComponent, AuthComponent, HomeComponent, HomeCardComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -25,6 +28,7 @@ import { HomeComponent } from './home/presentation/components/home/home.componen
     InputIconModule,
     InputTextModule,
     ButtonModule,
+    CardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

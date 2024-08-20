@@ -1,1 +1,5 @@
-<p>home works!</p>
+<div class="grid md:p-3 lg:p-7">
+    <div class="col-12 md:col-6 lg:col-4 sm:col-6" *ngFor="let item of items; index as i">
+        <app-home-card [item]="item" [index]="i"></app-home-card>
+    </div>
+</div>
