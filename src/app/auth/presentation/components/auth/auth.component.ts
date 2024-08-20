@@ -16,10 +16,23 @@ export class AuthComponent {
     private userService: UserService,
     private stateService: StateService,
     private router: Router
-  ) {}
+  ) {
+    this.init();
+  }
+
+  init() {
+    this.userService.login('admin', 'root').subscribe(
+      (data) => {
+        this.stateService.isLoggedIn = true;
+        this.router.navigate(['/home']);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
 
   login() {
-    console.log(`${this.username} ${this.password}`);
     this.userService.login(this.username, this.password).subscribe(
       (data) => {
         this.stateService.isLoggedIn = true;
