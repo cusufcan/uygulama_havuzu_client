@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
+import { StateService } from '../../../../auth/application/state.service';
 import { AppModel } from '../../../domain/app.model';
 
 @Component({
@@ -7,22 +9,25 @@ import { AppModel } from '../../../domain/app.model';
   styleUrl: './home-card.component.scss',
 })
 export class HomeCardComponent {
+  constructor(private router: Router, private stateService: StateService) {}
+
   @Input() item?: AppModel;
   @Input() index: number = 0;
 
   goApps() {
+    this.stateService.isLoggedIn = true;
     switch (this.index) {
       case 0:
-        console.log('Go to ToDo App');
+        this.router.navigate(['todo']);
         break;
       case 1:
-        console.log('Go to BMI App');
+        this.router.navigate(['bmi']);
         break;
       case 2:
-        console.log('Go to Random Quotes App');
+        this.router.navigate(['quotes']);
         break;
       case 3:
-        console.log('Go to Weather App');
+        this.router.navigate(['weather']);
         break;
     }
   }

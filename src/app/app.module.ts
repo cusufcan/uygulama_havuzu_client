@@ -16,9 +16,22 @@ import { HomeCardComponent } from './home/presentation/components/home-card/home
 import { HomeComponent } from './home/presentation/components/home/home.component';
 
 import { CardModule } from 'primeng/card';
+import { BmiComponent } from './apps/bmi_app/bmi/bmi.component';
+import { RandomquotesComponent } from './apps/randomquotes_app/randomquotes/randomquotes.component';
+import { TodoComponent } from './apps/todo_app/todo/todo.component';
+import { WeatherComponent } from './apps/weather_app/weather/weather.component';
 
 @NgModule({
-  declarations: [AppComponent, AuthComponent, HomeComponent, HomeCardComponent],
+  declarations: [
+    AppComponent,
+    AuthComponent,
+    HomeComponent,
+    HomeCardComponent,
+    BmiComponent,
+    RandomquotesComponent,
+    TodoComponent,
+    WeatherComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
