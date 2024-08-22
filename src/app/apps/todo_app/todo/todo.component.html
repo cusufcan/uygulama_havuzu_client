@@ -1,1 +1,23 @@
-<p>todo works!</p>
+<div class="p-card todo-card m-2">
+    <div class="p-card-header">
+        <h2>Todo List</h2>
+    </div>
+    <div class="p-card-body">
+        <div *ngFor="let todo of todos; let i = index" class="grid align-items-center todo-item my-1">
+            <div class="col">
+                <span>{{ todo.title }}</span>
+            </div>
+            <div class="col align-items-center flex justify-content-end">
+                <p-button [rounded]="true" [text]="true" severity="info" icon="pi pi-trash"
+                    (click)="deleteTodo(i)"></p-button>
+                <p-checkbox [(ngModel)]="todo.completed" [binary]="true" inputId="binary" />
+            </div>
+        </div>
+    </div>
+    <div class="p-2">
+        <div class="p-inputgroup">
+            <input type="text" pInputText [(ngModel)]="inputValue" placeholder="Add new todo..." />
+            <button pButton icon="pi pi-plus" class="p-button p-button-info" (click)="addTodo()"></button>
+        </div>
+    </div>
+</div>

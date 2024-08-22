@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
+import { CheckboxModule } from 'primeng/checkbox';
 import { IconFieldModule } from 'primeng/iconfield';
 import { InputIconModule } from 'primeng/inputicon';
 import { InputTextModule } from 'primeng/inputtext';
@@ -41,6 +42,7 @@ import { WeatherComponent } from './apps/weather_app/weather/weather.component';
     InputIconModule,
     InputTextModule,
     ButtonModule,
+    CheckboxModule,
     CardModule,
   ],
   providers: [],
