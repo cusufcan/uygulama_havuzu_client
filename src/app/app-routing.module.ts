@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BmiComponent } from './apps/bmi_app/bmi/bmi.component';
-import { RandomquotesComponent as QuotesComponent } from './apps/randomquotes_app/randomquotes/randomquotes.component';
-import { TodoComponent } from './apps/todo_app/todo/todo.component';
-import { WeatherComponent } from './apps/weather_app/weather/weather.component';
 import { BlockGuard } from './guards/block.guard';
-import { HomeComponent } from './home/presentation/components/home/home.component';
-import { AuthComponent } from './onion/presentation/components/auth/auth.component';
+import { BmiComponent } from './old/apps/bmi_app/bmi/bmi.component';
+import { RandomquotesComponent } from './old/apps/randomquotes_app/randomquotes/randomquotes.component';
+import { TodoComponent } from './old/apps/todo_app/todo/todo.component';
+import { WeatherComponent } from './old/apps/weather_app/weather/weather.component';
+import { AuthComponent } from './onion/presentation/pages/auth/auth.component';
+import { HomeComponent } from './onion/presentation/pages/home/home.component';
 
 const routes: Routes = [
   { path: 'auth', component: AuthComponent },
@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'bmi', component: BmiComponent, canActivate: [BlockGuard] },
   {
     path: 'quotes',
-    component: QuotesComponent,
+    component: RandomquotesComponent,
     canActivate: [BlockGuard],
   },
   { path: 'todo', component: TodoComponent, canActivate: [BlockGuard] },
