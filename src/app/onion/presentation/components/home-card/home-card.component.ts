@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { StateService } from '../../../../onion/core/application/services/state.service';
-import { AppModel } from '../../../domain/app.model';
+import { StateService } from '../../../core/application/services/state.service';
+import { AppModel } from '../../../core/domain/entities/app';
 
 @Component({
   selector: 'app-home-card',
