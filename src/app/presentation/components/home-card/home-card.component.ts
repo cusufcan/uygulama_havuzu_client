@@ -2,9 +2,11 @@ import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { StateService } from '../../../core/application/services/state.service';
 import { AppModel } from '../../../core/domain/entities/app';
+import { RouteIndexes } from '../../../core/domain/enums/route-indexes';
+import { RouteNames } from '../../../core/domain/enums/route-names';
 
 @Component({
-  selector: 'app-home-card',
+  selector: 'home-card',
   templateUrl: './home-card.component.html',
   styleUrl: './home-card.component.scss',
 })
@@ -17,17 +19,17 @@ export class HomeCardComponent {
   goApps() {
     this.stateService.isLoggedIn = true;
     switch (this.index) {
-      case 0:
-        this.router.navigate(['todo']);
+      case RouteIndexes.TODO:
+        this.router.navigate([RouteNames.TODO]);
         break;
-      case 1:
-        this.router.navigate(['bmi']);
+      case RouteIndexes.BMI:
+        this.router.navigate([RouteNames.BMI]);
         break;
-      case 2:
-        this.router.navigate(['quotes']);
+      case RouteIndexes.QUOTES:
+        this.router.navigate([RouteNames.QUOTES]);
         break;
-      case 3:
-        this.router.navigate(['weather']);
+      case RouteIndexes.WEATHER:
+        this.router.navigate([RouteNames.WEATHER]);
         break;
     }
   }

@@ -15,8 +15,11 @@ import { InputTextModule } from 'primeng/inputtext';
 
 import { CardModule } from 'primeng/card';
 import { AUTH_REPOSITORY_TOKEN } from './core/domain/interfaces/auth-repository.interface';
+import { TODO_REPOSITORY_TOKEN } from './core/domain/interfaces/todo-repository.interface';
 import { AuthRepositoryService } from './core/infrastructure/repositories/auth-repository.service';
+import { TodoRepositoryService } from './core/infrastructure/repositories/todo-repository.service';
 import { HomeCardComponent } from './presentation/components/home-card/home-card.component';
+import { TodoTileComponent } from './presentation/components/todo-tile/todo-tile.component';
 import { BmiComponent } from './presentation/pages/apps/bmi/bmi.component';
 import { RandomquotesComponent } from './presentation/pages/apps/randomquotes/randomquotes.component';
 import { TodoComponent } from './presentation/pages/apps/todo/todo.component';
@@ -33,6 +36,7 @@ import { HomeComponent } from './presentation/pages/home/home.component';
     RandomquotesComponent,
     TodoComponent,
     WeatherComponent,
+    TodoTileComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,6 +52,7 @@ import { HomeComponent } from './presentation/pages/home/home.component';
   ],
   providers: [
     { provide: AUTH_REPOSITORY_TOKEN, useClass: AuthRepositoryService },
+    { provide: TODO_REPOSITORY_TOKEN, useClass: TodoRepositoryService },
   ],
   bootstrap: [AppComponent],
 })

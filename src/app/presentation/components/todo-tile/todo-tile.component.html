@@ -1,0 +1,11 @@
+<div class="grid align-items-center todo-item my-1">
+    <div class="col" [ngClass]="{'line-through' : todo?.completed}">
+        <span>{{ todo?.title }}</span>
+    </div>
+    <div class="col align-items-center flex justify-content-end">
+        <p-button [rounded]="true" [text]="true" severity="info" icon="pi pi-trash"
+            (click)="sendOnDelete(i!)"></p-button>
+        <p-checkbox [(ngModel)]="todo!.completed" [binary]="true" (onChange)="sendOnUpdate(i!, $event.checked)"
+            inputId="binary" />
+    </div>
+</div>
