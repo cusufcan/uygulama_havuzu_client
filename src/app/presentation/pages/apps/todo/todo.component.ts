@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Todo } from '../model/todo.model';
+import { Todo } from '../../../../core/domain/entities/todo';
 
 @Component({
   selector: 'app-todo',
