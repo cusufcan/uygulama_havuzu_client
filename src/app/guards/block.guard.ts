@@ -5,18 +5,13 @@ import {
   Router,
   RouterStateSnapshot,
 } from '@angular/router';
-import { StateService } from '../auth/application/state.service';
-import { UserService } from '../auth/application/user.service';
+import { StateService } from '../onion/core/application/services/state.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class BlockGuard implements CanActivate {
-  constructor(
-    private userService: UserService,
-    private stateService: StateService,
-    private router: Router
-  ) {}
+  constructor(private stateService: StateService, private router: Router) {}
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
