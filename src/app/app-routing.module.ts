@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BlockGuard } from './guards/block.guard';
-import { BmiComponent } from './old/apps/bmi_app/bmi/bmi.component';
-import { RandomquotesComponent } from './old/apps/randomquotes_app/randomquotes/randomquotes.component';
-import { TodoComponent } from './old/apps/todo_app/todo/todo.component';
-import { WeatherComponent } from './old/apps/weather_app/weather/weather.component';
+import { BmiComponent } from './onion/presentation/pages/apps/bmi/bmi.component';
+import { RandomquotesComponent } from './onion/presentation/pages/apps/randomquotes/randomquotes.component';
+import { TodoComponent } from './onion/presentation/pages/apps/todo/todo.component';
+import { WeatherComponent } from './onion/presentation/pages/apps/weather/weather.component';
 import { AuthComponent } from './onion/presentation/pages/auth/auth.component';
 import { HomeComponent } from './onion/presentation/pages/home/home.component';
 
