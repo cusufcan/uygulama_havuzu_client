@@ -5,7 +5,7 @@ import {
   Router,
   RouterStateSnapshot,
 } from '@angular/router';
-import { StateService } from '../onion/core/application/services/state.service';
+import { StateService } from '../core/application/services/state.service';
 
 @Injectable({
   providedIn: 'root',
