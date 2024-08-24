@@ -1,17 +1,30 @@
-<div class="p-card todo-card m-2">
-    <div class="p-card-header">
-        <h2>Todo List</h2>
+<div class="grid justify-content-center align-items-center min-h-screen">
+  <p-card header="Todo List" styleClass="custom-card shadow-3 select-none">
+    <div class="p-2 overflow-y-scroll scroll" style="max-height: 400px">
+      <div *ngFor="let todo of todos; let i = index">
+        <todo-tile
+          (onDeleteClicked)="deleteTodo(i)"
+          (onUpdateClicked)="updateTodo($event.index, $event.isCompleted)"
+          [todo]="todo"
+          [i]="i"
+        ></todo-tile>
+      </div>
     </div>
-    <div class="p-card-body">
-        <div *ngFor="let todo of todos; let i = index">
-            <todo-tile (onDeleteClicked)="deleteTodo(i)"
-                (onUpdateClicked)="updateTodo($event.index, $event.isCompleted)" [todo]="todo" [i]="i"></todo-tile>
-        </div>
-    </div>
-    <div class="p-2">
-        <div class="p-inputgroup">
-            <input type="text" pInputText [(ngModel)]="inputValue" placeholder="Add new todo..." />
-            <button pButton icon="pi pi-plus" class="p-button p-button-info" (click)="createTodo()"></button>
-        </div>
-    </div>
+    <ng-template pTemplate="footer">
+      <div class="p-inputgroup">
+        <input
+          pInputText
+          type="text"
+          [(ngModel)]="inputValue"
+          placeholder="Add new todo..."
+        />
+        <button
+          pButton
+          icon="pi pi-plus"
+          class="p-button p-button-primary"
+          (click)="createTodo()"
+        ></button>
+      </div>
+    </ng-template>
+  </p-card>
 </div>

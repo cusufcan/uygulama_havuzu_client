@@ -28,7 +28,7 @@ export class TodoComponent {
     this.todoService
       .read()
       .then((todos) => {
-        this.todos = todos.sort((a, b) => a.id - b.id);
+        this.todos = todos.sort((a, b) => b.id - a.id);
       })
       .catch((error) => {
         console.error(error);

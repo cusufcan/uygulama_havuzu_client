@@ -9,13 +9,25 @@ import { AppModel } from '../../../core/domain/entities/app';
 export class HomeComponent {
   private baseUrl = 'assets/images/';
   items = [
-    new AppModel('ToDo', 'ToDo App', `${this.baseUrl}todo.jpg`),
-    new AppModel('BMI', 'BMI App', `${this.baseUrl}bmi.jpg`),
+    new AppModel(
+      'ToDo',
+      'Görevlerinizi verimli bir şekilde organize edin. Günlük sorumluluklarınızı kolayca takip edin.',
+      `${this.baseUrl}todo.jpg`
+    ),
+    new AppModel(
+      'BMI',
+      'Sağlığınızı takip edin. Vücut Kitle İndeksinizi (BMI) hesaplayın.',
+      `${this.baseUrl}bmi.jpg`
+    ),
     new AppModel(
       'Random Quotes',
-      'Random Quotes App',
+      'Her gün ilham verici sözlerle dolu bir güne başlayın.',
       `${this.baseUrl}twitter.jpg`
     ),
-    new AppModel('Weather', 'Weather App', `${this.baseUrl}weather.jpg`),
+    new AppModel(
+      'Weather',
+      'Güncel ve doğru hava durumu bilgileriyle her zaman bir adım önde olun.',
+      `${this.baseUrl}weather.jpg`
+    ),
   ];
 }

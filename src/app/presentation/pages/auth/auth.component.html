@@ -1,27 +1,48 @@
 <div class="container">
-    <div class="login-card">
-        <div class="p-grid">
-            <div class="p-col">
-                <p-iconField>
-                    <input class="w-full mb-1" type="text" pInputText placeholder="Username" [(ngModel)]="username" />
-                    <p-inputIcon styleClass="pi pi-user" />
-                </p-iconField>
-            </div>
-            <div class="p-col">
-                <p-iconField>
-                    <input class="w-full mt-1" type="password" pInputText placeholder="Password"
-                        [(ngModel)]="password" />
-                    <p-inputIcon styleClass="pi pi-lock" />
-                </p-iconField>
-            </div>
-            <div class="grid mt-1">
-                <div class="col">
-                    <button class="w-full" pButton label="Login" (click)="login()"></button>
-                </div>
-                <div class="col">
-                    <button class="w-full" pButton label="Register" (click)="register()"></button>
-                </div>
-            </div>
+  <div class="login-card">
+    <div class="p-grid">
+      <div class="p-col">
+        <p-iconField>
+          <input
+            class="w-full mb-1"
+            type="text"
+            pInputText
+            placeholder="Username"
+            [(ngModel)]="username"
+          />
+          <p-inputIcon styleClass="pi pi-user" />
+        </p-iconField>
+      </div>
+      <div class="p-col">
+        <p-iconField>
+          <input
+            class="w-full mt-1"
+            type="password"
+            pInputText
+            placeholder="Password"
+            [(ngModel)]="password"
+          />
+          <p-inputIcon styleClass="pi pi-lock" />
+        </p-iconField>
+      </div>
+      <div class="grid mt-1">
+        <div class="col">
+          <button
+            class="w-full"
+            pButton
+            label="Login"
+            (click)="login()"
+          ></button>
         </div>
+        <div class="col">
+          <button
+            class="w-full"
+            pButton
+            label="Register"
+            (click)="register()"
+          ></button>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
