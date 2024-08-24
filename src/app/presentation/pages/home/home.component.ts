@@ -7,10 +7,15 @@ import { AppModel } from '../../../core/domain/entities/app';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
+  private baseUrl = 'assets/images/';
   items = [
-    new AppModel('ToDo', 'ToDo App', 'blue'),
-    new AppModel('BMI', 'BMI App', 'green'),
-    new AppModel('Random Quotes', 'Random Quotes App', 'yellow'),
-    new AppModel('Weather', 'Weather App', 'gray'),
+    new AppModel('ToDo', 'ToDo App', `${this.baseUrl}todo.jpg`),
+    new AppModel('BMI', 'BMI App', `${this.baseUrl}bmi.jpg`),
+    new AppModel(
+      'Random Quotes',
+      'Random Quotes App',
+      `${this.baseUrl}twitter.jpg`
+    ),
+    new AppModel('Weather', 'Weather App', `${this.baseUrl}weather.jpg`),
   ];
 }

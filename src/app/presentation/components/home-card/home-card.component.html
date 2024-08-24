@@ -1,6 +1,8 @@
-<div class="p-d-flex p-jc-center p-ai-center m-3" (click)="goApps()">
-    <p-card [style]="{ height: '300px', background: '#a2cffe'}" class="custom-card text-center"
-        header="{{item?.title}}">
-        <p>{{item?.description}}</p>
-    </p-card>
+<div class="p-card p-component shadow-3 p-3 mb-3 flex flex-column justify-content-between hover-card" (click)="goApps()"
+    style="width: 400px;">
+    <img [src]="item?.imageUrl" alt="Card Image" class="p-mb-3 p-border-round" style="height: 300px;" />
+    <div class="p-card-content pl-2 pr-2">
+        <h2 class="p-mb-2">{{item?.title}}</h2>
+        <p class="p-mb-3">{{item?.description}}</p>
+    </div>
 </div>
