@@ -17,7 +17,7 @@ export class AuthComponent {
     private stateService: StateService,
     private router: Router
   ) {
-    this.init();
+    //this.init();
   }
 
   async init() {
