@@ -1,6 +1,6 @@
 import { Inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { User } from '../entities/user';
+import { Token } from '../entities/token';
 import {
   AUTH_REPOSITORY_TOKEN,
   IAuthRepository,
@@ -15,11 +15,11 @@ export class AuthService {
     private readonly authRepository: IAuthRepository
   ) {}
 
-  login(username: string, password: string): Observable<User> {
+  login(username: string, password: string): Observable<Token> {
     return this.authRepository.login(username, password);
   }
 
-  register(username: string, password: string): Observable<User> {
+  register(username: string, password: string): Observable<Token> {
     return this.authRepository.register(username, password);
   }
 }

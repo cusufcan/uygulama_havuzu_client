@@ -5,18 +5,18 @@ import {
   Router,
   RouterStateSnapshot,
 } from '@angular/router';
-import { StateService } from '../core/application/services/state.service';
+import { TokenService } from '../../domain/services/token.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class BlockGuard implements CanActivate {
-  constructor(private stateService: StateService, private router: Router) {}
+  constructor(private tokenService: TokenService, private router: Router) {}
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): boolean {
-    if (this.stateService.isLoggedIn) {
+    if (this.tokenService.isAuthenticated()) {
       return true;
     } else {
       this.router.navigate(['/auth']);

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BlockGuard } from './guards/block.guard';
+import { BlockGuard } from './core/infrastructure/guards/block.guard';
 import { BmiComponent } from './presentation/pages/apps/bmi/bmi.component';
 import { RandomquotesComponent } from './presentation/pages/apps/randomquotes/randomquotes.component';
 import { TodoComponent } from './presentation/pages/apps/todo/todo.component';

@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { StateService } from '../../../core/application/services/state.service';
 import { AppModel } from '../../../core/domain/entities/app';
 import { RouteIndexes } from '../../../core/domain/enums/route-indexes';
 import { RouteNames } from '../../../core/domain/enums/route-names';
@@ -11,13 +10,12 @@ import { RouteNames } from '../../../core/domain/enums/route-names';
   styleUrl: './home-card.component.scss',
 })
 export class HomeCardComponent {
-  constructor(private router: Router, private stateService: StateService) {}
+  constructor(private router: Router) {}
 
   @Input() item?: AppModel;
   @Input() index: number = 0;
 
   goApps() {
-    this.stateService.isLoggedIn = true;
     switch (this.index) {
       case RouteIndexes.TODO:
         this.router.navigate([RouteNames.TODO]);

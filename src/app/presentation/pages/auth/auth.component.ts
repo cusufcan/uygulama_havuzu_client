@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { StateService } from '../../../core/application/services/state.service';
 import { AuthService } from '../../../core/domain/services/auth.service';
+import { TokenService } from '../../../core/domain/services/token.service';
 
 @Component({
   selector: 'app-auth',
@@ -14,28 +14,14 @@ export class AuthComponent {
 
   constructor(
     private authService: AuthService,
-    private stateService: StateService,
+    private tokenService: TokenService,
     private router: Router
-  ) {
-    //this.init();
-  }
-
-  async init() {
-    this.authService.login('admin', 'root').subscribe(
-      (data) => {
-        this.stateService.isLoggedIn = true;
-        this.router.navigate(['/home']);
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
-  }
+  ) {}
 
   login() {
     this.authService.login(this.username, this.password).subscribe(
       (data) => {
-        this.stateService.isLoggedIn = true;
+        this.tokenService.setToken(data);
         this.router.navigate(['/home']);
       },
       (error) => {
@@ -47,7 +33,6 @@ export class AuthComponent {
   register() {
     this.authService.register(this.username, this.password).subscribe(
       (data) => {
-        this.stateService.isLoggedIn = true;
         this.router.navigate(['/home']);
       },
       (error) => {
