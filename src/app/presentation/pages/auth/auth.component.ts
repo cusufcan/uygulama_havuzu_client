@@ -16,7 +16,11 @@ export class AuthComponent {
     private authService: AuthService,
     private tokenService: TokenService,
     private router: Router
-  ) {}
+  ) {
+    if (this.tokenService.isAuthenticated()) {
+      this.router.navigate(['/home']);
+    }
+  }
 
   login() {
     this.authService.login(this.username, this.password).subscribe(
@@ -33,6 +37,7 @@ export class AuthComponent {
   register() {
     this.authService.register(this.username, this.password).subscribe(
       (data) => {
+        this.tokenService.setToken(data);
         this.router.navigate(['/home']);
       },
       (error) => {

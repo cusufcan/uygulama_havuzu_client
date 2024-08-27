@@ -26,9 +26,11 @@ export class TokenService {
         return true;
       } else {
         this.logout();
+        return false;
       }
+    } else {
+      return false;
     }
-    return false;
   }
 
   isTokenValid(token: Token): boolean {

@@ -19,8 +19,16 @@ const routes: Routes = [
   },
   { path: 'todo', component: TodoComponent, canActivate: [BlockGuard] },
   { path: 'weather', component: WeatherComponent, canActivate: [BlockGuard] },
-  { path: '**', redirectTo: '/auth', pathMatch: 'full' },
-  { path: '', redirectTo: '/auth', pathMatch: 'full' },
+  {
+    path: '**',
+    redirectTo: '/home',
+    pathMatch: 'full',
+  },
+  {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({
