@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 
 // Constants
 import { AUTH_REPOSITORY_TOKEN } from './core/domain/interfaces/auth-repository.interface';
+import { QUOTE_REPOSITORY_TOKEN } from './core/domain/interfaces/quote-repository.interface';
 import { TODO_REPOSITORY_TOKEN } from './core/domain/interfaces/todo-repository.interface';
 
 // Pages
@@ -34,6 +35,8 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { IconFieldModule } from 'primeng/iconfield';
 import { InputIconModule } from 'primeng/inputicon';
 import { InputTextModule } from 'primeng/inputtext';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { QuoteRepositoryService } from './core/infrastructure/repositories/quote-repository.service';
 
 @NgModule({
   declarations: [
@@ -58,11 +61,13 @@ import { InputTextModule } from 'primeng/inputtext';
     InputTextModule,
     ButtonModule,
     CheckboxModule,
+    InputTextareaModule,
     CardModule,
   ],
   providers: [
     { provide: AUTH_REPOSITORY_TOKEN, useClass: AuthRepositoryService },
     { provide: TODO_REPOSITORY_TOKEN, useClass: TodoRepositoryService },
+    { provide: QUOTE_REPOSITORY_TOKEN, useClass: QuoteRepositoryService },
   ],
   bootstrap: [AppComponent],
 })

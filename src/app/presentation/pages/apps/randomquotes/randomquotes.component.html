@@ -1,1 +1,29 @@
-<p>randomquotes works!</p>
+<div class="grid justify-content-center align-items-center min-h-screen">
+  <p-card
+    header="Random Quotes"
+    styleClass="custom-card shadow-3 select-none border-round m-2"
+  >
+    <textarea
+      rows="5"
+      cols="30"
+      pInputTextarea
+      class="mb-2 w-full"
+      [autoResize]="true"
+      [(ngModel)]="quote"
+    ></textarea>
+    <div class="flex justify-content-end">
+      <button
+        pButton
+        icon="pi pi-refresh"
+        class="p-button p-button-danger mr-1"
+        (click)="getQuote()"
+      ></button>
+      <button
+        pButton
+        icon="pi pi-twitter"
+        class="p-button p-button-contrast ml-1"
+        (click)="shareQuote()"
+      ></button>
+    </div>
+  </p-card>
+</div>
