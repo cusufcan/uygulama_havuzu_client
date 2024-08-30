@@ -1,51 +1,55 @@
-<div class="grid justify-content-center align-items-center min-h-screen">
-  <p-card
-    header="BMI Calculator"
-    styleClass="custom-card shadow-3 select-none border-round m-2"
-  >
-    <input
-      pInputText
-      type="text"
-      [(ngModel)]="height"
-      placeholder="Height (cm)"
-      class="mb-2 w-full"
-    />
-    <input
-      pInputText
-      type="text"
-      [(ngModel)]="weight"
-      placeholder="Weight (kg)"
-      class="mb-2 w-full"
-    />
-    <div class="grid flex mb-3">
-      <button
-        pButton
-        icon="pi pi-refresh"
-        class="p-button p-button-danger col mr-1"
-        (click)="reset()"
-      ></button>
-      <button
-        pButton
-        icon="pi pi-plus"
-        class="p-button p-button-primary col ml-1"
-        (click)="calculateBMI()"
-      ></button>
-    </div>
-    <div class="mb-3 font-bold bg-white shadow-3 border-round p-3">
-      <p class="mb-1">Your BMI: {{ bmiString }}</p>
-      <p>BMI Result: {{ bmiResult }}</p>
-    </div>
-    <div class="grid flex text-center font-medium" style="gap: 0.5rem">
-      <bmi-card
-        *ngFor="let item of bmiCategoryList"
-        class="col shadow-3 border-round"
-        [ngStyle]="{
+<div
+  class="grid justify-content-center align-items-center min-h-screen min-w-screen"
+>
+  <div class="col-12 sm:col-12 md:col-8 lg:col-6">
+    <p-card
+      header="BMI Calculator"
+      styleClass="custom-card shadow-3 select-none border-round m-2"
+    >
+      <input
+        pInputText
+        type="text"
+        [(ngModel)]="height"
+        placeholder="Height (cm)"
+        class="mb-2 w-full"
+      />
+      <input
+        pInputText
+        type="text"
+        [(ngModel)]="weight"
+        placeholder="Weight (kg)"
+        class="mb-2 w-full"
+      />
+      <div class="grid flex mb-3 gap-1">
+        <button
+          pButton
+          icon="pi pi-refresh"
+          class="p-button p-button-danger col-12 sm:col-12 md:col lg:col"
+          (click)="reset()"
+        ></button>
+        <button
+          pButton
+          icon="pi pi-plus"
+          class="p-button p-button-primary col-12 sm:col-12 md:col lg:col"
+          (click)="calculateBMI()"
+        ></button>
+      </div>
+      <div class="mb-3 font-bold bg-white shadow-3 border-round p-3">
+        <p class="mb-1">Your BMI: {{ bmiString }}</p>
+        <p>BMI Result: {{ bmiResult }}</p>
+      </div>
+      <div class="grid flex text-center font-medium" style="gap: 0.5rem">
+        <bmi-card
+          *ngFor="let item of bmiCategoryList"
+          class="col shadow-3 border-round"
+          [ngStyle]="{
           'background-color':
             item.category === bmiString ? 'lightblue' : 'white',
         }"
-        [bmi]="item.bmi"
-        [category]="item.category"
-      ></bmi-card>
-    </div>
-  </p-card>
+          [bmi]="item.bmi"
+          [category]="item.category"
+        ></bmi-card>
+      </div>
+    </p-card>
+  </div>
 </div>

@@ -1,16 +1,12 @@
 <div
-  class="p-card p-component shadow-3 mb-3 flex flex-column justify-content-between hover-card"
+  class="p-card p-component shadow-3 flex flex-column hover-card p-3 h-15rem"
   (click)="goApps()"
-  style="width: 400px"
 >
-  <img
-    [src]="item?.imageUrl"
-    alt="Card Image"
-    class="p-border-round"
-    style="height: 350px"
-  />
-  <div class="p-4">
-    <h2 class="mb-2 select-none">{{ item?.title }}</h2>
-    <p class="mb-3 select-none">{{ item?.description }}</p>
-  </div>
+  <h2 class="mb-2 select-none text-center">
+    <i class="pi pi-{{ item?.iconString }}"></i>
+    {{ item?.title }}
+  </h2>
+  <p class="mb-3 select-none">
+    {{ item?.description }}
+  </p>
 </div>

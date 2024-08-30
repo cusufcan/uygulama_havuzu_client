@@ -19,9 +19,16 @@ import { HomeComponent } from './presentation/pages/home/home.component';
 import { BmiCardComponent } from './presentation/components/bmi-card/bmi-card.component';
 import { HomeCardComponent } from './presentation/components/home-card/home-card.component';
 import { TodoTileComponent } from './presentation/components/todo-tile/todo-tile.component';
+import { CityCardComponent } from './presentation/components/weather/city-card/city-card.component';
+import { CityConditionImageComponent } from './presentation/components/weather/city-condition-image/city-condition-image.component';
+import { CityConditionLabelComponent } from './presentation/components/weather/city-condition-label/city-condition-label.component';
+import { CityCurrentLabelComponent } from './presentation/components/weather/city-current-label/city-current-label.component';
+import { CityInfoLabelComponent } from './presentation/components/weather/city-info-label/city-info-label.component';
+import { WeatherMainCardComponent } from './presentation/components/weather/weather-main-card/weather-main-card.component';
 
 // Services
 import { AuthRepositoryService } from './core/infrastructure/repositories/auth-repository.service';
+import { QuoteRepositoryService } from './core/infrastructure/repositories/quote-repository.service';
 import { TodoRepositoryService } from './core/infrastructure/repositories/todo-repository.service';
 
 // Modules
@@ -33,23 +40,35 @@ import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { CheckboxModule } from 'primeng/checkbox';
 import { IconFieldModule } from 'primeng/iconfield';
+import { InputGroupModule } from 'primeng/inputgroup';
+import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
 import { InputIconModule } from 'primeng/inputicon';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputTextareaModule } from 'primeng/inputtextarea';
-import { QuoteRepositoryService } from './core/infrastructure/repositories/quote-repository.service';
 
 @NgModule({
   declarations: [
+    // Base
     AppComponent,
+
+    // Pages
     AuthComponent,
     HomeComponent,
     BmiComponent,
-    HomeCardComponent,
     RandomquotesComponent,
     TodoComponent,
     WeatherComponent,
+
+    // Components
+    HomeCardComponent,
     BmiCardComponent,
     TodoTileComponent,
+    WeatherMainCardComponent,
+    CityCardComponent,
+    CityInfoLabelComponent,
+    CityCurrentLabelComponent,
+    CityConditionLabelComponent,
+    CityConditionImageComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,6 +82,8 @@ import { QuoteRepositoryService } from './core/infrastructure/repositories/quote
     CheckboxModule,
     InputTextareaModule,
     CardModule,
+    InputGroupModule,
+    InputGroupAddonModule,
   ],
   providers: [
     { provide: AUTH_REPOSITORY_TOKEN, useClass: AuthRepositoryService },

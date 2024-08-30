@@ -1,7 +1,26 @@
-<div class="grid justify-content-center align-items-center min-h-screen">
-  <div *ngFor="let item of items; index as i">
-    <div class="col-12 sm:col-6 lg:col-4 m-3">
-      <home-card [item]="item" [index]="i"></home-card>
-    </div>
+<div
+  class="grid grid-nogutter align-items-center justify-content-center min-h-screen min-w-screen"
+>
+  <div class="grid col-12 sm:col-10 md:col-10 lg:col-10">
+    <home-card
+      class="col-12 sm:col-12 md:col-6 lg:col-3"
+      [item]="items[0]"
+      [index]="0"
+    ></home-card>
+    <home-card
+      class="col-12 sm:col-12 md:col-6 lg:col-3"
+      [item]="items[1]"
+      [index]="1"
+    ></home-card>
+    <home-card
+      class="col-12 sm:col-12 md:col-6 lg:col-3"
+      [item]="items[2]"
+      [index]="2"
+    ></home-card>
+    <home-card
+      class="col-12 sm:col-12 md:col-6 lg:col-3"
+      [item]="items[3]"
+      [index]="3"
+    ></home-card>
   </div>
 </div>
