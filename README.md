@@ -1,6 +1,6 @@
-﻿# MercanSocial
+# Uygulama Havuzu Client
 
-- Sakarya Büyükşehir Belediyesi Bilgi İşlem Dairesinde yaptığım zorunlu stajımda verilen Junior .NET Geliştirici Ödev Projesi'ni tamamlamış bulunmaktayım.
+- Sakarya Büyükşehir Belediyesi Bilgi İşlem Dairesinde yaptığım zorunlu stajımda verilen Junior .NET Geliştirici Ödev Projesi'nin Front-End tarafını tamamlamış bulunmaktayım.
 
 ## Uygulamalar:
 
