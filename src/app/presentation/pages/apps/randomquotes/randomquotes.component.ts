@@ -4,7 +4,6 @@ import { QuoteService } from '../../../../core/domain/services/quote.service';
 @Component({
   selector: 'app-randomquotes',
   templateUrl: './randomquotes.component.html',
-  styleUrl: './randomquotes.component.scss',
 })
 export class RandomquotesComponent {
   quote: string | null = null;

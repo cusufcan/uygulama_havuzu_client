@@ -6,7 +6,10 @@ import { Token } from '../entities/token';
   providedIn: 'root',
 })
 export class TokenService {
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+    // FOR TEST
+    //this.logout();
+  }
 
   setToken(token: Token) {
     localStorage.setItem('token', JSON.stringify(token));

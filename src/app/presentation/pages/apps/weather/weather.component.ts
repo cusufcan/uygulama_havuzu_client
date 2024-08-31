@@ -5,7 +5,6 @@ import { WeatherService } from '../../../../core/domain/services/weather.service
 @Component({
   selector: 'app-weather',
   templateUrl: './weather.component.html',
-  styleUrl: './weather.component.scss',
 })
 export class WeatherComponent {
   customCity?: WeatherResponse;

@@ -14,23 +14,19 @@
         [autoResize]="true"
         [(ngModel)]="quote"
       ></textarea>
-      <div class="grid flex">
-        <div class="col-12 sm:col-12 md:col lg:col">
-          <button
-            pButton
-            icon="pi pi-refresh"
-            class="w-full p-button p-button-danger"
-            (click)="getQuote()"
-          ></button>
-        </div>
-        <div class="col-12 sm:col-12 md:col lg:col">
-          <button
-            pButton
-            icon="pi pi-twitter"
-            class="w-full p-button p-button-contrast"
-            (click)="shareQuote()"
-          ></button>
-        </div>
+      <div class="grid flex gap-1 mx-0">
+        <button
+          pButton
+          icon="pi pi-refresh"
+          class="w-full p-button p-button-danger col-12 sm:col-12 md:col lg:col"
+          (click)="getQuote()"
+        ></button>
+        <button
+          pButton
+          icon="pi pi-twitter"
+          class="w-full p-button p-button-contrast col-12 sm:col-12 md:col lg:col"
+          (click)="shareQuote()"
+        ></button>
       </div>
       <!-- <div class="flex justify-content-end">
         <button
