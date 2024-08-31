@@ -5,7 +5,10 @@
     class="grid grid-nogutter flex m-0 h-full col-12 sm:col-12 md:col-12 lg:col-9 gap-2"
   >
     <div class="col-12 sm:col-12 md:col lg:col">
-      <weather-main-card></weather-main-card>
+      <weather-main-card
+        [weather]="this.customCity"
+        (onSearchClicked)="fetchCustomWeather($event)"
+      ></weather-main-card>
     </div>
     <div class="col-12 sm:col-12 md:col lg:col">
       <div class="grid grid-nogutter gap-2">
@@ -13,9 +16,11 @@
           <div class="grid grid-nogutter gap-2">
             <weather-city-card
               class="col-12 sm:col-12 md:col lg:col"
+              [weather]="this.defaultCityWeathers[0]"
             ></weather-city-card>
             <weather-city-card
               class="col-12 sm:col-12 md:col lg:col"
+              [weather]="this.defaultCityWeathers[1]"
             ></weather-city-card>
           </div>
         </div>
@@ -23,9 +28,11 @@
           <div class="grid grid-nogutter gap-2">
             <weather-city-card
               class="col-12 sm:col-12 md:col lg:col"
+              [weather]="this.defaultCityWeathers[2]"
             ></weather-city-card>
             <weather-city-card
               class="col-12 sm:col-12 md:col lg:col"
+              [weather]="this.defaultCityWeathers[3]"
             ></weather-city-card>
           </div>
         </div>

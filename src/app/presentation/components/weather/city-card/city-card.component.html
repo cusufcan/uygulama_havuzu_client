@@ -1,16 +1,37 @@
 <div class="p-card border-round-lg shadow-3 p-3 select-none">
-  <city-info-label></city-info-label>
-  <city-current-label></city-current-label>
+  <city-info-label
+    [city]="weather?.name"
+    [country]="weather?.sys?.country"
+  ></city-info-label>
+  <city-current-label
+    [current]="weather?.main?.temp ?? 0"
+    [label]="weather?.weather?.at(0)?.description ?? 'Şehir aratın!'"
+  ></city-current-label>
   <div class="grid grid-nogutter flex justify-content-between">
     <div class="grid grid-nogutter col-6">
-      <city-condition-label class="col-12"></city-condition-label>
-      <city-condition-label class="col-12"></city-condition-label>
-      <city-condition-label class="col-12"></city-condition-label>
+      <city-condition-label
+        [icon]="'air'"
+        [condition]="weather?.wind?.speed?.toLocaleString() ?? 0 + ' m/s'"
+        class="col-12"
+      ></city-condition-label>
+      <city-condition-label
+        [icon]="'water_drop'"
+        [condition]="weather?.main?.humidity?.toLocaleString() ?? 0 + '%'"
+        class="col-12"
+      ></city-condition-label>
+      <city-condition-label
+        [icon]="'sunny'"
+        [condition]="weather?.sys?.sunriseString?.toLocaleString() ?? '0'"
+        class="col-12"
+      ></city-condition-label>
     </div>
     <div
       class="flex align-items-center align-self-center justify-content-end text-center col-6"
     >
-      <city-condition-image class="flex"></city-condition-image>
+      <city-condition-image
+        [icon]="weather?.weather?.at(0)?.icon ?? '01d'"
+        class="flex"
+      ></city-condition-image>
     </div>
   </div>
 </div>

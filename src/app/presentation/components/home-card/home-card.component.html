@@ -1,12 +1,13 @@
 <div
-  class="p-card p-component shadow-3 flex flex-column hover-card p-3 h-15rem"
+  class="cursor-pointer shadow-5 hover-card bg-white border-round-lg"
   (click)="goApps()"
 >
-  <h2 class="mb-2 select-none text-center">
-    <i class="pi pi-{{ item?.iconString }}"></i>
-    {{ item?.title }}
-  </h2>
-  <p class="mb-3 select-none">
-    {{ item?.description }}
-  </p>
+  <div class="grid grid-nogutter text-center select-none">
+    <h2 class="col-12">{{ item?.title }}</h2>
+    <img
+      class="col-12 border-round-bottom-lg border-top-1 border-gray-300"
+      src="{{ item?.imagePath }}"
+      alt="{{ item?.title }}"
+    />
+  </div>
 </div>

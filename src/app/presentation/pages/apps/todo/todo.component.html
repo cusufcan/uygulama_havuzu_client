@@ -4,9 +4,12 @@
   <div class="col-12 sm:col-12 md:col-8 lg:col-6">
     <p-card
       header="Todo List"
-      styleClass="custom-card shadow-3 select-none m-2"
+      styleClass="text-center custom-card shadow-3 select-none m-2 border-round-lg"
     >
-      <div class="p-2 overflow-y-scroll scroll" style="max-height: 400px">
+      <div
+        class="text-left p-2 overflow-y-scroll scroll"
+        style="max-height: 400px"
+      >
         <div *ngFor="let todo of todos; let i = index">
           <todo-tile
             (onDeleteClicked)="deleteTodo(i)"

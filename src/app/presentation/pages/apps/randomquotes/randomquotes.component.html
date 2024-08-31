@@ -4,7 +4,7 @@
   <div class="col-12 sm:col-12 md:col-8 lg:col-6">
     <p-card
       header="Random Quotes"
-      styleClass="custom-card shadow-3 select-none border-round"
+      styleClass="text-center custom-card shadow-3 select-none border-round-lg"
     >
       <textarea
         rows="5"
@@ -14,7 +14,25 @@
         [autoResize]="true"
         [(ngModel)]="quote"
       ></textarea>
-      <div class="flex justify-content-end">
+      <div class="grid flex">
+        <div class="col-12 sm:col-12 md:col lg:col">
+          <button
+            pButton
+            icon="pi pi-refresh"
+            class="w-full p-button p-button-danger"
+            (click)="getQuote()"
+          ></button>
+        </div>
+        <div class="col-12 sm:col-12 md:col lg:col">
+          <button
+            pButton
+            icon="pi pi-twitter"
+            class="w-full p-button p-button-contrast"
+            (click)="shareQuote()"
+          ></button>
+        </div>
+      </div>
+      <!-- <div class="flex justify-content-end">
         <button
           pButton
           icon="pi pi-refresh"
@@ -27,7 +45,7 @@
           class="p-button p-button-contrast ml-1"
           (click)="shareQuote()"
         ></button>
-      </div>
+      </div> -->
     </p-card>
   </div>
 </div>

@@ -4,7 +4,7 @@
   <div class="col-12 sm:col-12 md:col-8 lg:col-6">
     <p-card
       header="BMI Calculator"
-      styleClass="custom-card shadow-3 select-none border-round m-2"
+      styleClass="text-center custom-card shadow-3 select-none border-round-lg m-2"
     >
       <input
         pInputText
@@ -34,7 +34,7 @@
           (click)="calculateBMI()"
         ></button>
       </div>
-      <div class="mb-3 font-bold bg-white shadow-3 border-round p-3">
+      <div class="text-left mb-3 font-bold bg-white shadow-3 border-round p-3">
         <p class="mb-1">Your BMI: {{ bmiString }}</p>
         <p>BMI Result: {{ bmiResult }}</p>
       </div>

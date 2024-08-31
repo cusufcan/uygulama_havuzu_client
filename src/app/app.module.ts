@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AUTH_REPOSITORY_TOKEN } from './core/domain/interfaces/auth-repository.interface';
 import { QUOTE_REPOSITORY_TOKEN } from './core/domain/interfaces/quote-repository.interface';
 import { TODO_REPOSITORY_TOKEN } from './core/domain/interfaces/todo-repository.interface';
+import { WEATHER_REPOSITROY_TOKEN } from './core/domain/interfaces/weather-repository.interface';
 
 // Pages
 import { BmiComponent } from './presentation/pages/apps/bmi/bmi.component';
@@ -30,6 +31,7 @@ import { WeatherMainCardComponent } from './presentation/components/weather/weat
 import { AuthRepositoryService } from './core/infrastructure/repositories/auth-repository.service';
 import { QuoteRepositoryService } from './core/infrastructure/repositories/quote-repository.service';
 import { TodoRepositoryService } from './core/infrastructure/repositories/todo-repository.service';
+import { WeatherRepositoryService } from './core/infrastructure/repositories/weather-repository.service';
 
 // Modules
 import { HttpClientModule } from '@angular/common/http';
@@ -86,9 +88,11 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
     InputGroupAddonModule,
   ],
   providers: [
+    // Repository Tokens
     { provide: AUTH_REPOSITORY_TOKEN, useClass: AuthRepositoryService },
     { provide: TODO_REPOSITORY_TOKEN, useClass: TodoRepositoryService },
     { provide: QUOTE_REPOSITORY_TOKEN, useClass: QuoteRepositoryService },
+    { provide: WEATHER_REPOSITROY_TOKEN, useClass: WeatherRepositoryService },
   ],
   bootstrap: [AppComponent],
 })
