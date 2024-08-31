@@ -1,27 +1,43 @@
-# UygulamaHavuzuClient
+﻿# MercanSocial
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
+- Sakarya Büyükşehir Belediyesi Bilgi İşlem Dairesinde yaptığım zorunlu stajımda verilen Junior .NET Geliştirici Ödev Projesi'ni tamamlamış bulunmaktayım.
 
-## Development server
+## Uygulamalar:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Auth: JWT Giriş/Kayıt İşlemleri
+- Todo: Yapılacaklar Listesi
+- BMI: Vücut Kitle Endeksi Hesaplama
+- Random Quotes: Twitter'da Rastgele Söz Paylaşma
+- Weather: Anlık Hava Durumu
 
-## Code scaffolding
+## Kurulum:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    git clone https://github.com/cusufcan/uygulama_havuzu_client
 
-## Build
+## Ekran Görüntüleri:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+<table>
+    <tr><td><img src="src/assets/ss/auth.png" alt="1"></td></tr>
+    <tr><td><img src="src/assets/ss/home.png" alt="2"></td></tr>
+    <tr><td><img src="src/assets/ss/todo.png" alt="3"></td></tr>
+    <tr><td><img src="src/assets/ss/bmi.png" alt="4"></td></tr>
+    <tr><td><img src="src/assets/ss/twitter.png" alt="5"></td></tr>
+    <tr><td><img src="src/assets/ss/weather.png" alt="6"></td></tr>
+</table>
 
-## Running unit tests
+## Kullanılan Teknolojiler:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- HTML & CSS & TypeScript
+- Angular Framework
+- PrimeNG
+- PrimeFlex
+- PrimeIcons
+- Onion Architecture
+- JWT Bearer
+- AJAX CRUD
+- HTTP Client
+- Material Icons
 
-## Running end-to-end tests
+## Lisans:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+    MIT
