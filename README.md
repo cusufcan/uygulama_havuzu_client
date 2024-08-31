@@ -14,16 +14,43 @@
 
     git clone https://github.com/cusufcan/uygulama_havuzu_client
 
-## Ekran Görüntüleri:
+## Sayfalar:
 
-<table>
-    <tr><td><img src="src/assets/ss/auth.png" alt="1"></td></tr>
-    <tr><td><img src="src/assets/ss/home.png" alt="2"></td></tr>
-    <tr><td><img src="src/assets/ss/todo.png" alt="3"></td></tr>
-    <tr><td><img src="src/assets/ss/bmi.png" alt="4"></td></tr>
-    <tr><td><img src="src/assets/ss/twitter.png" alt="5"></td></tr>
-    <tr><td><img src="src/assets/ss/weather.png" alt="6"></td></tr>
-</table>
+### 1. Auth
+
+### Basit bir kullanıcı kayıt ve giriş işlemleri. Authorization: JWT Bearer ve Database: PostgreSQL kullanılmıştır.
+
+![Auth](src/assets/ss/auth.png)
+
+### 2. Home
+
+### Projedeki tüm uygulamaların içerisinde bulunduğu responsive grid.
+
+![Home](src/assets/ss/home.png)
+
+### 3. Todo
+
+### Basit bir yapılacaklar listesi uygulaması. Yerel veritabanı kullanan tek uygulama. Yazmış olduğum API ile iletişim kurup Ajax CRUD işlemlerini PostgreSQL veritabanında yapar.
+
+![Todo](src/assets/ss/todo.png)
+
+### 4. BMI
+
+### Kullanıcı tarafından girilen boy ve kilo bilgilerine dayanarak vücut kitle endeksi hesaplaması yapıp kullanıcıya kilosunun ne durumda olduğunu gösterir.
+
+![BMI](src/assets/ss/bmi.png)
+
+### 5. Random Quotes
+
+### API'den rastgele bir söz getirip, kişiselleştirmeye açık bir şekilde X'te paylaşır.
+
+![Twitter](src/assets/ss/twitter.png)
+
+### 6. Weather
+
+### Anlık hava durumu uygulaması. 4 ana şehir sabit olarak çekilir. Sol taraftaki şehir, kullanıcının arattığı şehirdir.
+
+![Weather](src/assets/ss/weather.png)
 
 ## Kullanılan Teknolojiler:
 
