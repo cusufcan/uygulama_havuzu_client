@@ -11,13 +11,13 @@ import { HomeComponent } from './presentation/pages/home/home.component';
 const routes: Routes = [
   { path: 'auth', component: AuthComponent },
   { path: 'home', component: HomeComponent, canActivate: [BlockGuard] },
+  { path: 'todo', component: TodoComponent, canActivate: [BlockGuard] },
   { path: 'bmi', component: BmiComponent, canActivate: [BlockGuard] },
   {
     path: 'quotes',
     component: RandomquotesComponent,
     canActivate: [BlockGuard],
   },
-  { path: 'todo', component: TodoComponent, canActivate: [BlockGuard] },
   { path: 'weather', component: WeatherComponent, canActivate: [BlockGuard] },
   {
     path: '**',
