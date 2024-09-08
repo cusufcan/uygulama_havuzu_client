@@ -4,7 +4,6 @@ import { AppModel } from '../../../core/domain/entities/app';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
 })
 export class HomeComponent {
   basePath = 'assets/images';
